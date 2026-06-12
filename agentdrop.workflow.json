@@ -2,7 +2,7 @@
   "name": "Article-to-Video Explainer",
   "description": "Turn pasted article text into a 4-5 section short video explainer package.",
   "repoUrl": "https://github.com/ilamanov/agentdrop-article-video-workflow",
-  "startingRef": "main",
+  "startingRef": "",
   "inputs": [
     {
       "type": "textarea",
@@ -63,4 +63,3 @@
     "artifacts/final-video.mp4"
   ]
 }
-
