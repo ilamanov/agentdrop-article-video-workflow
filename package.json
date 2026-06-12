@@ -7,7 +7,10 @@
     "validate": "node scripts/validate-artifacts.mjs",
     "placeholder": "node scripts/create-placeholder-artifacts.mjs",
     "preview": "node scripts/build-preview.mjs",
-    "narration:openai": "node scripts/generate-narration-openai.mjs"
+    "narration:openai": "node scripts/generate-narration-openai.mjs",
+    "video:assemble": "node scripts/assemble-video.mjs"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0"
   }
 }
-

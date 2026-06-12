@@ -15,7 +15,7 @@ Always write these files:
 - `artifacts/production-manifest.json`
 - `artifacts/preview.html`
 
-If media generation tools and credentials are available, also create:
+For AgentDrop runs, media generation credentials are expected to be available. Also create:
 
 - `artifacts/images/section-01.png`
 - `artifacts/images/section-02.png`
@@ -28,7 +28,7 @@ If media generation tools and credentials are available, also create:
 - `artifacts/audio/section-04.mp3`
 - `artifacts/audio/section-05.mp3` when needed
 
-If video assembly is available, create:
+Always assemble the final video:
 
 - `artifacts/final-video.mp4`
 
@@ -45,21 +45,30 @@ If video assembly is available, create:
    - image generation prompt
    - estimated duration
 5. Keep narration natural and spoken. Avoid article-like prose.
-6. Generate media if the tools are configured.
-7. Build `preview.html`.
-8. Run `npm run validate`.
+6. Run `npm install` if dependencies are not installed.
+7. Use Fal MCP to generate one image per section and save each image locally under `artifacts/images/`.
+8. Run `npm run narration:openai` to generate one MP3 per section under `artifacts/audio/`.
+9. Run `npm run video:assemble` to create `artifacts/final-video.mp4`.
+10. Run `npm run preview` to build `preview.html`.
+11. Run `npm run validate`.
 
 ## Media Tooling
 
-Use Cursor's `fal-ai` MCP server when it is available. Inspect the available Fal tools before choosing models. Prefer fast, reliable generation over maximum quality for demo runs.
+Use Cursor's `fal-ai` MCP server. Inspect the available Fal tools before choosing models. Prefer fast, reliable generation over maximum quality for demo runs.
 
-For narration, if `OPENAI_API_KEY` is available, write `artifacts/narration.json` first and then run:
+Recommended image model: use a fast image generation model suitable for clean 16:9 editorial illustrations. For each section:
+
+1. Call Fal through the `fal-ai` MCP server with the section's `imagePrompt`.
+2. Download the returned image URL into `artifacts/images/{section-id}.png`.
+3. Set that path as `imagePath` in `artifacts/sections.json`.
+
+For narration, write `artifacts/narration.json` first and then run:
 
 ```bash
 npm run narration:openai
 ```
 
-If Fal or OpenAI credentials are missing, do not fail the workflow. Produce the full production package with image prompts and a clear note in `production-manifest.json`.
+If Fal MCP or OpenAI credentials are missing, fail visibly and explain which credential/tool is missing. Do not silently downgrade to a text-only package for AgentDrop runs.
 
 ## Style Rules
 

@@ -8,10 +8,11 @@ The intended run flow:
 2. The agent extracts the core argument.
 3. The agent creates 4-5 video sections.
 4. Each section gets narration, on-screen text, and an image prompt.
-5. If credentials/tools are available, the agent generates images through Fal and narration through OpenAI TTS.
-6. The final files are written under `artifacts/`.
+5. The agent generates images through Fal and narration through OpenAI TTS.
+6. The agent assembles the generated media into `artifacts/final-video.mp4`.
+7. The final files are written under `artifacts/`.
 
-This repo intentionally does not commit API keys. Configure keys in the cloud agent environment or replace the placeholder in `.cursor/mcp.json` before running with real media generation.
+This repo intentionally does not commit API keys. AgentDrop passes the Fal MCP server config and OpenAI/Fal environment variables into the Cursor cloud run. See `.cursor/mcp.example.json` only if you want to run the workflow outside AgentDrop.
 
 ## AgentDrop Inputs
 
@@ -32,21 +33,18 @@ Recommended output paths:
 - `artifacts/image-prompts.md`
 - `artifacts/production-manifest.json`
 - `artifacts/preview.html`
+- `artifacts/final-video.mp4`
 
-## Demo Mode
+## Real Media Mode
 
-If media credentials are not available, still create the text production package. Run:
+Run:
 
 ```bash
-npm run placeholder
+npm install
+npm run narration:openai
+npm run video:assemble
 npm run preview
 npm run validate
 ```
 
-## Real Media Mode
-
-When available:
-
-- Use Cursor's configured `fal-ai` MCP server to generate section images.
-- Use `OPENAI_API_KEY` with `npm run narration:openai` to generate narration MP3 files.
-- Update `artifacts/production-manifest.json` with every generated asset path.
+Use Cursor's configured `fal-ai` MCP server to generate section images before running the narration and assembly scripts. If Fal MCP or OpenAI credentials are missing, fail visibly instead of creating a text-only result.

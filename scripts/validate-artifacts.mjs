@@ -6,7 +6,8 @@ const requiredFiles = [
   "artifacts/narration.json",
   "artifacts/image-prompts.md",
   "artifacts/production-manifest.json",
-  "artifacts/preview.html"
+  "artifacts/preview.html",
+  "artifacts/final-video.mp4"
 ];
 
 for (const file of requiredFiles) {
@@ -24,6 +25,12 @@ for (const section of sections.sections) {
       throw new Error(`Missing ${key} in ${section.id ?? "unknown section"}.`);
     }
   }
+  for (const key of ["imagePath", "audioPath"]) {
+    if (!section[key]) {
+      throw new Error(`Missing ${key} in ${section.id}.`);
+    }
+    await access(section[key]);
+  }
 }
 
 const narration = JSON.parse(await readFile("artifacts/narration.json", "utf8"));
@@ -35,6 +42,8 @@ const manifest = JSON.parse(await readFile("artifacts/production-manifest.json",
 if (!Array.isArray(manifest.outputs) || manifest.outputs.length === 0) {
   throw new Error("production-manifest.json must list outputs.");
 }
+if (manifest.status !== "video_generated") {
+  throw new Error("production-manifest.json status must be video_generated.");
+}
 
 console.log("Artifact validation passed.");
-
