@@ -1,0 +1,93 @@
+{
+  "status": "video_generated",
+  "notes": [
+    "All images generated using fal-ai/flux/schnell",
+    "All audio generated using OpenAI TTS",
+    "Video assembled using FFmpeg",
+    "Complete 30-second video package with 4 sections"
+  ],
+  "outputs": [
+    {
+      "path": "artifacts/video-plan.md",
+      "type": "markdown"
+    },
+    {
+      "path": "artifacts/sections.json",
+      "type": "json"
+    },
+    {
+      "path": "artifacts/narration.json",
+      "type": "json"
+    },
+    {
+      "path": "artifacts/image-prompts.md",
+      "type": "markdown"
+    },
+    {
+      "path": "artifacts/production-manifest.json",
+      "type": "json"
+    },
+    {
+      "path": "artifacts/images/section-01.png",
+      "type": "image"
+    },
+    {
+      "path": "artifacts/images/section-02.png",
+      "type": "image"
+    },
+    {
+      "path": "artifacts/images/section-03.png",
+      "type": "image"
+    },
+    {
+      "path": "artifacts/images/section-04.png",
+      "type": "image"
+    },
+    {
+      "path": "artifacts/audio/section-01.mp3",
+      "type": "audio"
+    },
+    {
+      "path": "artifacts/audio/section-02.mp3",
+      "type": "audio"
+    },
+    {
+      "path": "artifacts/audio/section-03.mp3",
+      "type": "audio"
+    },
+    {
+      "path": "artifacts/audio/section-04.mp3",
+      "type": "audio"
+    },
+    {
+      "path": "artifacts/preview.html",
+      "type": "html"
+    },
+    {
+      "path": "artifacts/final-video.mp4",
+      "type": "video/mp4"
+    }
+  ],
+  "sections": [
+    {
+      "id": "section-01",
+      "imagePath": "artifacts/images/section-01.png",
+      "audioPath": "artifacts/audio/section-01.mp3"
+    },
+    {
+      "id": "section-02",
+      "imagePath": "artifacts/images/section-02.png",
+      "audioPath": "artifacts/audio/section-02.mp3"
+    },
+    {
+      "id": "section-03",
+      "imagePath": "artifacts/images/section-03.png",
+      "audioPath": "artifacts/audio/section-03.mp3"
+    },
+    {
+      "id": "section-04",
+      "imagePath": "artifacts/images/section-04.png",
+      "audioPath": "artifacts/audio/section-04.mp3"
+    }
+  ]
+}

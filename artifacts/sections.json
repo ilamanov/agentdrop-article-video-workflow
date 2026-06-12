@@ -1,0 +1,50 @@
+{
+  "title": "Build Agents with Cursor SDK",
+  "sourceSummary": "Cursor launched an SDK that lets developers build production-ready coding agents using the same runtime and models that power Cursor. Run agents locally, on cloud VMs, or embed them in your products with just a few lines of TypeScript.",
+  "sections": [
+    {
+      "id": "section-01",
+      "title": "The Agent Infrastructure Problem",
+      "durationSeconds": 7,
+      "narration": "Building reliable coding agents means solving sandboxing, state management, and context at scale.",
+      "onScreenText": "The Challenge:\nAgent Infrastructure",
+      "visualDescription": "A whiteboard sketch showing tangled boxes labeled 'sandboxing', 'state', 'context', and 'models' connected by messy arrows, representing complexity.",
+      "imagePrompt": "Hand-drawn whiteboard illustration showing interconnected boxes and tangled arrows representing complex agent infrastructure components, black marker on white background, simple educational diagram style, clean lines with minimal gray shading, 16:9 aspect ratio",
+      "imagePath": "artifacts/images/section-01.png",
+      "audioPath": "artifacts/audio/section-01.mp3"
+    },
+    {
+      "id": "section-02",
+      "title": "Cursor SDK",
+      "durationSeconds": 7,
+      "narration": "Cursor SDK gives you production agents in a few lines of TypeScript.",
+      "onScreenText": "Cursor SDK\n→ Production Agents",
+      "visualDescription": "A whiteboard showing a simple code snippet with 'Agent.create()' transforming into a running agent icon with a checkmark.",
+      "imagePrompt": "Hand-drawn whiteboard illustration of a simple TypeScript code snippet on the left transforming via an arrow into a checkmark icon on the right, black marker on white background, minimal clean educational style, 16:9 aspect ratio",
+      "imagePath": "artifacts/images/section-02.png",
+      "audioPath": "artifacts/audio/section-02.mp3"
+    },
+    {
+      "id": "section-03",
+      "title": "Deploy Anywhere",
+      "durationSeconds": 8,
+      "narration": "Run agents on cloud VMs with dedicated environments, trigger them from CI/CD, or embed them directly in your product.",
+      "onScreenText": "Deploy Everywhere:\nCloud • CI/CD • Products",
+      "visualDescription": "A whiteboard diagram showing one 'Agent' box in the center with arrows pointing to three destinations: a cloud, a pipeline, and a product box.",
+      "imagePrompt": "Hand-drawn whiteboard diagram with a central circle labeled 'Agent' with three arrows pointing outward to simple icons representing cloud, CI/CD pipeline, and product interface, black marker on white background, clean educational style, 16:9 aspect ratio",
+      "imagePath": "artifacts/images/section-03.png",
+      "audioPath": "artifacts/audio/section-03.mp3"
+    },
+    {
+      "id": "section-04",
+      "title": "Start Building",
+      "durationSeconds": 8,
+      "narration": "Teams are already building on Composer 2 and frontier models. Vote for my project to see what's possible.",
+      "onScreenText": "Vote for My Project ✓",
+      "visualDescription": "A whiteboard showing 'Vote for My Project' with simple drawn checkmarks and upward trending arrows, conveying momentum and success.",
+      "imagePrompt": "Hand-drawn whiteboard illustration showing the text 'Vote for My Project' with hand-drawn checkmarks, upward arrows, and simple success indicators around it, black marker on white background, clean motivational style, 16:9 aspect ratio",
+      "imagePath": "artifacts/images/section-04.png",
+      "audioPath": "artifacts/audio/section-04.mp3"
+    }
+  ]
+}

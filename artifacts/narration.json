@@ -1,0 +1,24 @@
+{
+  "sections": [
+    {
+      "id": "section-01",
+      "text": "Building reliable coding agents means solving sandboxing, state management, and context at scale.",
+      "audioPath": "artifacts/audio/section-01.mp3"
+    },
+    {
+      "id": "section-02",
+      "text": "Cursor SDK gives you production agents in a few lines of TypeScript.",
+      "audioPath": "artifacts/audio/section-02.mp3"
+    },
+    {
+      "id": "section-03",
+      "text": "Run agents on cloud VMs with dedicated environments, trigger them from CI/CD, or embed them directly in your product.",
+      "audioPath": "artifacts/audio/section-03.mp3"
+    },
+    {
+      "id": "section-04",
+      "text": "Teams are already building on Composer 2 and frontier models. Vote for my project to see what's possible.",
+      "audioPath": "artifacts/audio/section-04.mp3"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+file '/workspace/artifacts/video-tmp/01-section-01.mp4'
+file '/workspace/artifacts/video-tmp/02-section-02.mp4'
+file '/workspace/artifacts/video-tmp/03-section-03.mp4'
+file '/workspace/artifacts/video-tmp/04-section-04.mp4'
