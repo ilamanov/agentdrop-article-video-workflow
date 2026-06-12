@@ -1,0 +1,66 @@
+{
+  "name": "Article-to-Video Explainer",
+  "description": "Turn pasted article text into a 4-5 section short video explainer package.",
+  "repoUrl": "https://github.com/ilamanov/agentdrop-article-video-workflow",
+  "startingRef": "main",
+  "inputs": [
+    {
+      "type": "textarea",
+      "label": "Article text",
+      "variable": "article",
+      "required": true,
+      "placeholder": "Paste the full article here."
+    },
+    {
+      "type": "select",
+      "label": "Audience",
+      "variable": "audience",
+      "required": true,
+      "options": ["Founders", "Developers", "Customers", "General audience"]
+    },
+    {
+      "type": "select",
+      "label": "Tone",
+      "variable": "tone",
+      "required": true,
+      "options": ["Clear", "Punchy", "Educational", "Contrarian"]
+    },
+    {
+      "type": "select",
+      "label": "Length",
+      "variable": "length",
+      "required": true,
+      "options": ["30 seconds", "60 seconds", "90 seconds"]
+    },
+    {
+      "type": "select",
+      "label": "Visual style",
+      "variable": "visual_style",
+      "required": true,
+      "options": [
+        "Clean startup explainer",
+        "Hand-drawn whiteboard",
+        "Cinematic editorial",
+        "Meme-style explainer"
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Call to action",
+      "variable": "call_to_action",
+      "required": false,
+      "placeholder": "Optional closing line or viewer action."
+    }
+  ],
+  "promptTemplatePath": "workflow/templates/prompt-template.md",
+  "outputPaths": [
+    "artifacts/video-plan.md",
+    "artifacts/sections.json",
+    "artifacts/narration.json",
+    "artifacts/image-prompts.md",
+    "artifacts/production-manifest.json",
+    "artifacts/preview.html",
+    "artifacts/final-video.mp4"
+  ]
+}
+

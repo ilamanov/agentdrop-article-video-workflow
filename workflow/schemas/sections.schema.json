@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Video Sections",
+  "type": "object",
+  "required": ["title", "sourceSummary", "sections"],
+  "properties": {
+    "title": { "type": "string" },
+    "sourceSummary": { "type": "string" },
+    "sections": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "durationSeconds",
+          "narration",
+          "onScreenText",
+          "visualDescription",
+          "imagePrompt"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "durationSeconds": { "type": "number" },
+          "narration": { "type": "string" },
+          "onScreenText": { "type": "string" },
+          "visualDescription": { "type": "string" },
+          "imagePrompt": { "type": "string" },
+          "imagePath": { "type": "string" },
+          "audioPath": { "type": "string" }
+        }
+      }
+    }
+  }
+}
+

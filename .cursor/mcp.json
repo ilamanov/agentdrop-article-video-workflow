@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "fal-ai": {
+      "url": "https://mcp.fal.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_FAL_KEY"
+      }
+    }
+  }
+}
+

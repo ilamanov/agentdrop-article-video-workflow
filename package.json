@@ -1,0 +1,13 @@
+{
+  "name": "agentdrop-article-video-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-artifacts.mjs",
+    "placeholder": "node scripts/create-placeholder-artifacts.mjs",
+    "preview": "node scripts/build-preview.mjs",
+    "narration:openai": "node scripts/generate-narration-openai.mjs"
+  }
+}
+
